@@ -6,7 +6,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import styles from "./card.module.css";
 
-export const CardHotel = ({hotel}) => {
+export const CardHotel = ({ hotel }) => {
+  const handleClick=()=>{}
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -29,26 +30,30 @@ export const CardHotel = ({hotel}) => {
           color="text.secondary"
           className={styles.descriptionHotel}
         >
-         {hotel.description}
+          {hotel.description}
         </Typography>
         <Typography
           variant="body2"
           color="text.secondary"
           className={styles.price}
         >
-         Price: ${hotel.price}
+          Price: ${hotel.price}
         </Typography>
         <Typography
           variant="body2"
           color="text.secondary"
           className={styles.countryCityHotel}
         >
-        Coutry: {hotel.country}, City: {hotel.city}
+          Coutry: {hotel.country}, City: {hotel.city}
         </Typography>
       </CardContent>
       <CardActions className={styles.containerButton}>
-        <Button size="small" className={styles.buttonCardHotel}>Ver màs</Button>
-        <Button size="small" className={styles.buttonCardHotel}>Reservar</Button>
+        <Button size="small" className={styles.buttonCardHotel} onClick={handleClick} >
+          Ver màs
+        </Button>
+        <Button size="small" className={styles.buttonCardHotel}>
+          Reservar
+        </Button>
       </CardActions>
     </Card>
   );
