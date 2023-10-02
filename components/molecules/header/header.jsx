@@ -1,5 +1,7 @@
 
 
+
+import { Button } from '@mui/material';
 import styles from'./header.module.css';
 
 export const Header = ({
@@ -66,8 +68,14 @@ export const Header = ({
                 <option value="medium">Medium</option>
                 <option value="large">Large</option>
             </select>
-           
-              <button>Clean</button>
+          <div> 
+            <Button variant="text" className={styles.button}>Clear</Button>
+            </div>
+            <div> 
+
+            <h2 className={styles.subtitle}>we have found for you </h2>
+           <p className={styles.paragraph}>All size hotels of all category price, in all countries.</p>
+            </div>
             
             </div>
         </header>
