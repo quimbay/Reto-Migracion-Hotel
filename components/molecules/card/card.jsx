@@ -6,9 +6,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import styles from "./card.module.css";
 import { MainButton } from "../../atoms/button/Button";
+import Link from "next/link";
 
 export const CardHotel = ({ hotel, snackbar }) => {
-  //const handleClick=()=>{}
+  //const { name } = hotel;
+  const handleClick = () => {
+    localStorage.setItem("selectedHotel", JSON.stringify(hotel));
+  };
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -49,12 +53,19 @@ export const CardHotel = ({ hotel, snackbar }) => {
         </Typography>
       </CardContent>
       <CardActions className={styles.containerButton}>
-        
-        <MainButton className={styles.buttonCardHotel} > Detalles</MainButton>
-       
-        
-        <MainButton className={styles.buttonCardHotel} onClick={()=>snackbar(true)} >
-        Reservas</MainButton>
+
+        <Link href={`detail/${hotel.name}`}>
+          <MainButton className={styles.buttonCardHotel} onClick={handleClick}>
+            Detalles
+          </MainButton>
+        </Link>
+
+        <MainButton
+          className={styles.buttonCardHotel}
+          onClick={() => snackbar(true)}
+        >
+          Reservas
+        </MainButton>
       </CardActions>
     </Card>
   );

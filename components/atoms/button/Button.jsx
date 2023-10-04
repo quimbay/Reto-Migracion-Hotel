@@ -1,10 +1,10 @@
 
 import {Button} from "@mui/material";
 
-export const MainButton = ({chidren, ...props}) =>{
+export const MainButton = ({children,...props}) =>{
     return(
-        <Button size="Large"{... props}>
-            {chidren}
+        <Button size="Large" {...props}>
+            {children}
         </Button>
 
     )
