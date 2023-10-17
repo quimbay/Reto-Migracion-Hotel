@@ -26,7 +26,6 @@
   padding: 0.9rem 0rem;
   border-radius: 0.8rem;
 }
-
 .input {
   height: 30px;
   border: none;
@@ -36,6 +35,7 @@
 
 .filtersBox__country {
   width: calc(90% + 0.8rem);
+
 }
 
 .filtersBox__input {
@@ -55,6 +55,7 @@
 }
 
 .filtersBox__btn:hover {
+
   color: #e26811;
   background-color: rgba(255, 255, 255, 0.75);
   border: 2px solid #e26811;
@@ -68,79 +69,68 @@
 .header__filterDercription {
   display: none;
 }
+
+@media (min-width:1023px) {
+
+  .header {
+      padding: 4rem 4.5rem;
+      background-size: 100% 140%;
+  }
+
+  .header__title {
+      font-size: 9.6rem;
+  }
+
+  .filtersBox {
+      max-width: none;
+      flex-wrap: nowrap;
+      margin-top: 4.7rem;
+      padding: 0rem;
+      background-color: transparent;
+  }
+
+  .filtersBox__country {
+      width: 20.8rem;
+      height: 3.4rem;
+      background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .filtersBox__input {
+      width: 20.8rem;
+      height: 3.4rem;
+      background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .filtersBox__btn {
+      width: 10rem;
+      height: 3.4rem;
+      margin-left: 0rem;
+  }
+
+  .header__subtitle {
+      display: block;
+      margin-top: 2.6rem;
+      font-size: 4.8rem;
+      font-family: var(--thirdFont);
+      color: var(--primarytexcolor);
+      font-weight: var(--lg);
+  }
+
+  .header__filterDercription {
+      display: block;
+      margin-top: 1.7rem;
+      font-size: 2.4rem;
+      font-family: var(--primaryFont);
+      color: var(--primarytexcolor);
+      font-weight: var(--sm);
+  }
+}
+
+
 .button {
   font-size: 12px;
   font-weight: bold;
   color: #ffffff;
   background-color: #e26811;
   width: 120px;
-}
-
-/*.subtitle {
-  font-size:3rem;
-  font-family: var( --thirdFont);
-  color: var(--primarytexcolor);
-  margin-top: 50px;
-  position: relative;
-  margin-right: 400;
-}
-.paragraph {
-  margin-top: 50px;
-  position: relative;
-  right: 300px;
-}*/
-
-@media (min-width: 1023px) {
-  .header {
-    padding: 4rem 4.5rem;
-    background-size: 100% 140%;
-  }
-
-  .header__title {
-    font-size: 9.6rem;
-  }
-
-  .filtersBox {
-    max-width: none;
-    flex-wrap: nowrap;
-    margin-top: 4.7rem;
-    padding: 0rem;
-    background-color: transparent;
-  }
-
-  .filtersBox__country {
-    width: 20.8rem;
-    height: 3.4rem;
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-
-  .filtersBox__input {
-    width: 20.8rem;
-    height: 3.4rem;
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-
-  .filtersBox__btn {
-    width: 10rem;
-    height: 3.4rem;
-    margin-left: 0rem;
-  }
-
-  .header__subtitle {
-    display: block;
-    margin-top: 2.6rem;
-    font-size: 4.8rem;
-    font-family: var(--thirdFont);
-    color: var(--primarytexcolor);
-    font-weight: var(--lg);
-  }
-
-  .header__filterDercription {
-    display: block;
-    margin-top: 1.7rem;
-    font-size: 2.4rem;
-    font-family: var(--primaryFont);
-    color: var(--primarytexcolor);
-    font-weight: var(--sm);
-  }
 }
